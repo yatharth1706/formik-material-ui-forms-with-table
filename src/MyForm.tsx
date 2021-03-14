@@ -17,7 +17,10 @@ export const MyForm: React.FC<Props> = ({ onSubmit }) => {
   return (
     <Formik
       initialValues={{ firstName: "", lastName: "", email: "" }}
-      onSubmit={(values) => onSubmit(values)}
+      onSubmit={(values, { resetForm }) => {
+        onSubmit(values);
+        resetForm();
+      }}
     >
       {({ values }) => (
         <Form>
