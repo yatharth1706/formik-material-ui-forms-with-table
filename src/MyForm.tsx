@@ -26,6 +26,7 @@ export const MyForm: React.FC<Props> = ({ onSubmit }) => {
               name="firstName"
               placeholder="First name"
               component={MyField}
+              label="First Name"
             />
           </div>
           <div>
@@ -33,10 +34,16 @@ export const MyForm: React.FC<Props> = ({ onSubmit }) => {
               name="lastName"
               placeholder="Last name"
               component={MyField}
+              label="Last Name"
             />{" "}
           </div>
           <div>
-            <Field name="email" placeholder="Email" component={MyField} />
+            <Field
+              name="email"
+              placeholder="Email"
+              component={MyField}
+              label="Email"
+            />
           </div>
           <Button type="submit">Submit</Button>
           <pre>{JSON.stringify(values, null, 2)}</pre>
